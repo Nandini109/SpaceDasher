@@ -10,11 +10,24 @@ public class PlayerController : MonoBehaviour
     private InputAction Dash;
 
     private Rigidbody2D rb;
+
+    [Header("Player")]
     public float FlySpeed = 5f;
     public float FallSpeed = 2f;
     public float RunSpeed = 3f;
-    public float MultiplierForce = 2f;
+
+    [Header("Multiplier")]
+    public float MultiplierForce = 5f;
+    public float MultiplierTime = 0.5f;
+
+    [Header("Reducer")]
+    public float ReducedSpeed = 1f;
+    public float ReducedTime = 0.5f;
+    private float RestoreSpeed;
+
     private bool isPlayerDashing;
+    private bool OnMultiplier;
+    private bool OnReducer;
 
     private void Awake()
     {
@@ -23,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
         playerControls.Player.Dash.performed += ctx => OnButtonPressed();
         playerControls.Player.Dash.canceled += ctx => OnButtonReleased();
+
+        RestoreSpeed = RunSpeed;
     } 
 
     private void Update()
@@ -70,12 +85,51 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Multiplier"))
         {
-            transform.position += new Vector3(MultiplierForce, 0, 0);
+            //transform.position += new Vector3(MultiplierForce, 0, 0);
+            StartCoroutine(MultilierForward());
         }
 
         if(other.CompareTag("Reducer"))
         {
-            transform.position += new Vector3(-MultiplierForce, 0, 0);
+            //transform.position += new Vector3(-MultiplierForce, 0, 0);
+            StartCoroutine(SpeedReducer());
         }
+    }
+
+    private IEnumerator MultilierForward()
+    {
+
+        OnMultiplier = true;
+        Vector3 startPosition = transform.position;
+
+        Vector3 targetPosition = startPosition + new Vector3(MultiplierForce, 0, 0);
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < MultiplierTime)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / MultiplierTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPosition;
+
+        OnMultiplier = false;
+    }
+
+    private IEnumerator SpeedReducer()
+    {
+        OnReducer = true;
+
+        RunSpeed = ReducedSpeed;
+        Debug.Log("Speed is Reduced");
+
+        yield return new WaitForSeconds(ReducedTime);
+
+        RunSpeed = RestoreSpeed;
+        Debug.Log("Speed is Restored");
+
+        OnReducer = false;
     }
 }
