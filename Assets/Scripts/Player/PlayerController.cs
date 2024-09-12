@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     private InputAction Dash;
 
     private Rigidbody2D rb;
-    public float Fly = 5f;
-    public float Fall = 2f;
+    public float FlySpeed = 5f;
+    public float FallSpeed = 2f;
+    public float RunSpeed = 3f;
     private bool isPlayerDashing;
 
     private void Awake()
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
         {
             OnButtonReleased();
         }
+
+        RunCountinous();
     }
     private void OnEnable()
     {
@@ -47,13 +50,18 @@ public class PlayerController : MonoBehaviour
     private void OnButtonPressed()
     {
         isPlayerDashing = true;
-        rb.velocity = new Vector2(rb.velocity.x, Fly);
+        rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
     }
 
     private void OnButtonReleased()
     {
         isPlayerDashing = false;
-        rb.velocity += new Vector2(0, -Fall * Time.deltaTime);
+        rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+    }
+
+    private void RunCountinous()
+    {
+        rb.velocity = new Vector2(RunSpeed, rb.velocity.y);
     }
 
 }
