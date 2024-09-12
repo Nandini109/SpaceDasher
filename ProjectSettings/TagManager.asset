@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Multiplier
+  - Reducer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Multiplier
   - Water
   - UI
   - 
@@ -40,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Multiplier
+    uniqueID: 2938279023
     locked: 0

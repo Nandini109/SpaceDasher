@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float FlySpeed = 5f;
     public float FallSpeed = 2f;
     public float RunSpeed = 3f;
+    public float MultiplierForce = 2f;
     private bool isPlayerDashing;
 
     private void Awake()
@@ -64,4 +65,17 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(RunSpeed, rb.velocity.y);
     }
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Multiplier"))
+        {
+            transform.position += new Vector3(MultiplierForce, 0, 0);
+        }
+
+        if(other.CompareTag("Reducer"))
+        {
+            transform.position += new Vector3(-MultiplierForce, 0, 0);
+        }
+    }
 }
