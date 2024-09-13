@@ -3,15 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Multiplier
+  - Reducer
+  - Spikes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Multiplier
   - Water
   - UI
-  - 
+  - Mechanics
   - 
   - 
   - 
@@ -41,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: SpaceShip
-    uniqueID: 621570651
+  - name: Multiplier
+    uniqueID: 2938279023
+    locked: 0
+  - name: Mechanics
+    uniqueID: 1116174207
     locked: 0
