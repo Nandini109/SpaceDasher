@@ -1185,10 +1185,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1124373899273923559, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
-      propertyPath: FlySpeed
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8858839256749815960, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.69
@@ -1229,7 +1225,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 845445298338794478, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
