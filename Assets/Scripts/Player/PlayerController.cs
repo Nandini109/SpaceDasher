@@ -94,8 +94,17 @@ public class PlayerController : MonoBehaviour
             //transform.position += new Vector3(-MultiplierForce, 0, 0);
             StartCoroutine(SpeedReducer());
         }
+
+
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Spikes")
+        {
+            Destroy(gameObject);
+        }
+    }
     private IEnumerator MultilierForward()
     {
 
