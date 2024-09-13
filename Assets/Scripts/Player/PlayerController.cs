@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float FlySpeed = 5f;
     public float FallSpeed = 2f;
     public float RunSpeed = 4f;
+    [SerializeField] private GameObject Thrust;
 
     [Header("Multiplier")]
     public float MultiplierForce = 5f;
@@ -38,7 +39,12 @@ public class PlayerController : MonoBehaviour
         playerControls.Player.Dash.canceled += ctx => OnButtonReleased();
 
         RestoreSpeed = RunSpeed;
-    } 
+    }
+
+    private void Start()
+    {
+        Thrust.gameObject.SetActive(false);
+    }
 
     private void Update()
     {
@@ -67,6 +73,8 @@ public class PlayerController : MonoBehaviour
     {
         isPlayerDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
+        Thrust.gameObject.SetActive(true);
+        
         Debug.Log("Player is Flying");
     }
 
@@ -74,6 +82,7 @@ public class PlayerController : MonoBehaviour
     {
         isPlayerDashing = false;
         rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+        Thrust.gameObject.SetActive(false);
         
     }
 
