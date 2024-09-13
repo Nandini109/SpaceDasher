@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player")]
     public float FlySpeed = 5f;
     public float FallSpeed = 2f;
-    public float RunSpeed = 3f;
+    public float RunSpeed = 4f;
 
     [Header("Multiplier")]
     public float MultiplierForce = 5f;
@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Spikes")
         {
             Destroy(gameObject);
+            Debug.Log("Player is Dead");
         }
     }
     private IEnumerator MultilierForward()
