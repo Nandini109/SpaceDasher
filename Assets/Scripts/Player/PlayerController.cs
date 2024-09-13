@@ -67,12 +67,14 @@ public class PlayerController : MonoBehaviour
     {
         isPlayerDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
+        Debug.Log("Player is Flying");
     }
 
     private void OnButtonReleased()
     {
         isPlayerDashing = false;
         rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+        
     }
 
     private void RunCountinous()
