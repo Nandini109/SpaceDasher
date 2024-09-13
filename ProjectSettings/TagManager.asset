@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Multiplier
   - Reducer
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Multiplier
   - Water
   - UI
-  - 
+  - Mechanics
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
     locked: 0
   - name: Multiplier
     uniqueID: 2938279023
+    locked: 0
+  - name: Mechanics
+    uniqueID: 1116174207
     locked: 0
