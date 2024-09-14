@@ -7,8 +7,14 @@ public class CameraMove : MonoBehaviour
 
     public float MoveSpeed = 4f;
 
+    private bool StopCamera = false;
+
     private void Update()
     {
-        transform.Translate(Vector3.right * MoveSpeed * Time.deltaTime);
+        if ((!StopCamera)
+        {
+            transform.Translate(Vector3.right * MoveSpeed * Time.deltaTime);
+        }
+        
     }
 }

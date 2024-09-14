@@ -12,18 +12,18 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Player")]
-    public float FlySpeed = 5f;
-    public float FallSpeed = 2f;
-    public float RunSpeed = 4f;
+    [SerializeField] private float FlySpeed = 5f;
+    [SerializeField] private float FallSpeed = 2f;
+    [SerializeField] private float RunSpeed = 4f;
     [SerializeField] private GameObject Thrust;
 
     [Header("Multiplier")]
-    public float MultiplierForce = 5f;
-    public float MultiplierTime = 0.5f;
+    [SerializeField] private float MultiplierForce = 5f;
+    [SerializeField] private float MultiplierTime = 0.5f;
 
     [Header("Reducer")]
-    public float ReducedSpeed = 1f;
-    public float ReducedTime = 0.5f;
+    [SerializeField] private float ReducedSpeed = 1f;
+    [SerializeField] private float ReducedTime = 0.5f;
     private float RestoreSpeed;
 
     private bool isPlayerDashing;
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
         Thrust.gameObject.SetActive(true);
         
-        Debug.Log("Player is Flying");
+       // Debug.Log("Player is Flying");
     }
 
     private void OnButtonReleased()
@@ -94,13 +94,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Multiplier"))
+        if (other.GetComponent<Multiplier>())
         {
             //transform.position += new Vector3(MultiplierForce, 0, 0);
             StartCoroutine(MultilierForward());
+            Debug.Log("Yayayayayayayaya");
         }
 
-        if(other.CompareTag("Reducer"))
+        if(other.GetComponent<Reducer>())
         {
             //transform.position += new Vector3(-MultiplierForce, 0, 0);
             StartCoroutine(SpeedReducer());
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Spikes")
+        if(collision.gameObject.GetComponent<Spikes>())
         {
             Destroy(gameObject);
             Debug.Log("Player is Dead");
