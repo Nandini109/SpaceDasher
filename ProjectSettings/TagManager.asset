@@ -50,3 +50,9 @@ TagManager:
   - name: Mechanics
     uniqueID: 1116174207
     locked: 0
+  - name: staticObstakle
+    uniqueID: 223613343
+    locked: 0
+  - name: Ground
+    uniqueID: 2633873617
+    locked: 0
