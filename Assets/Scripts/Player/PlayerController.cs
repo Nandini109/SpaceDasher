@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private bool OnMultiplier;
     private bool OnReducer;
 
+    private CameraMove cameraMove;
+
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -44,6 +46,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Thrust.gameObject.SetActive(false);
+
+        cameraMove = FindObjectOfType<CameraMove>();
     }
 
     private void Update()
@@ -114,8 +118,8 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Spikes>())
         {
-            Destroy(gameObject);
-            Debug.Log("Player is Dead");
+            PlayerDeath();
+            
         }
     }
     private IEnumerator MultilierForward()
@@ -153,5 +157,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Speed is Restored");
 
         OnReducer = false;
+    }
+
+    private void PlayerDeath()
+    {
+        cameraMove.StopCamera();
+        Destroy(gameObject);
+        Debug.Log("Player is Dead");
+
     }
 }

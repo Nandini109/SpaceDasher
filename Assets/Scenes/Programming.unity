@@ -1276,6 +1276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenEater
       objectReference: {fileID: 0}
+    - target: {fileID: 6005179803716503784, guid: c3b2c6eb30f74ff44a06e6dbfb89f805, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
