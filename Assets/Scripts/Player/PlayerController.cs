@@ -161,6 +161,7 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerDeath()
     {
+        //CameraMove cameraMove = GetComponent<CameraMove>();
         cameraMove.StopCamera();
         Destroy(gameObject);
         Debug.Log("Player is Dead");
