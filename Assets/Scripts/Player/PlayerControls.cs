@@ -50,6 +50,34 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MenuControl"",
+            ""id"": ""d3a30a35-c721-4757-b877-1b88c4adf65d"",
+            ""actions"": [
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""fc563d4f-8e12-4d47-b9ab-84576b2e4496"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""97f0d422-97d5-48dc-87e2-b1fe4206c8d3"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -57,6 +85,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        // MenuControl
+        m_MenuControl = asset.FindActionMap("MenuControl", throwIfNotFound: true);
+        m_MenuControl_Pause = m_MenuControl.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,8 +191,58 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // MenuControl
+    private readonly InputActionMap m_MenuControl;
+    private List<IMenuControlActions> m_MenuControlActionsCallbackInterfaces = new List<IMenuControlActions>();
+    private readonly InputAction m_MenuControl_Pause;
+    public struct MenuControlActions
+    {
+        private @PlayerControls m_Wrapper;
+        public MenuControlActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Pause => m_Wrapper.m_MenuControl_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_MenuControl; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuControlActions set) { return set.Get(); }
+        public void AddCallbacks(IMenuControlActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MenuControlActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MenuControlActionsCallbackInterfaces.Add(instance);
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+        }
+
+        private void UnregisterCallbacks(IMenuControlActions instance)
+        {
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+        }
+
+        public void RemoveCallbacks(IMenuControlActions instance)
+        {
+            if (m_Wrapper.m_MenuControlActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMenuControlActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MenuControlActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MenuControlActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MenuControlActions @MenuControl => new MenuControlActions(this);
     public interface IPlayerActions
     {
         void OnDash(InputAction.CallbackContext context);
+    }
+    public interface IMenuControlActions
+    {
+        void OnPause(InputAction.CallbackContext context);
     }
 }
