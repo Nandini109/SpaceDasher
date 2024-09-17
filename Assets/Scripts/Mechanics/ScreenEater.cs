@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ScreenEater : MonoBehaviour
 {
-    public float ScreenEatSpeed = 4f;
+    [SerializeField] private float ScreenEatSpeed = 4f;
 
     private void Update()
     {
+        //Constant speed at which screen eater moves
         transform.Translate(Vector3.right * ScreenEatSpeed * Time.deltaTime);
     }
 }

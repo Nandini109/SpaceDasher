@@ -44,9 +44,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Multiplier
-    uniqueID: 2938279023
-    locked: 0
-  - name: Mechanics
-    uniqueID: 1116174207
-    locked: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2132316342181295672}
   - component: {fileID: 1124373899273923559}
   - component: {fileID: 2440497482465170858}
-  - component: {fileID: 845445298338794478}
+  - component: {fileID: 8856170414793623357}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -75,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1356688273
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -7880147386975391891, guid: 09428716b44698f4e80bf0d51acc6af1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,14 +105,14 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7519778234ceeee4ea70a6d00c2c6b85, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -145,7 +145,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 107427556189648179}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7519778234ceeee4ea70a6d00c2c6b85, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -186,27 +186,18 @@ PolygonCollider2D:
       - {x: 1, y: 0.25}
       - {x: 0.25, y: 0.75}
   m_UseDelaunayMesh: 0
---- !u!95 &845445298338794478
-Animator:
-  serializedVersion: 5
+--- !u!114 &8856170414793623357
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107427556189648179}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3fe4c5a93487b694ba952a6ed575b86c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b5cb18fd093ae4e97ea79da8674649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7581143483257919199
 PrefabInstance:
   m_ObjectHideFlags: 0
