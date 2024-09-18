@@ -47,6 +47,9 @@ TagManager:
   - name: BackGround
     uniqueID: 2833467741
     locked: 0
+  - name: Gear
+    uniqueID: 2835584893
+    locked: 0
   - name: Ground
     uniqueID: 4186899087
     locked: 0
