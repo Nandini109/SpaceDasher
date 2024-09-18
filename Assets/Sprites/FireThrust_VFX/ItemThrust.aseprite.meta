@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: ItemThrust_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -9.666667}
+    pivot: {x: 0.4375, y: -1.909091}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 23
-      width: 6
-      height: 3
+      width: 16
+      height: 11
     spriteID: 4bf9c6820b6628b49af868d36f3b75af
     spriteBone: []
     spriteOutline: []
@@ -148,9 +148,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 20
-      y: 4
-      width: 8
+      x: 4
+      y: 42
+      width: 16
       height: 8
     spriteID: 9a67cdc380903af4a9d080b984b7f309
     spriteBone: []
@@ -160,17 +160,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 20, y: 4}
+    uvTransform: {x: 4, y: 42}
   - name: ItemThrust_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -1.909091}
+    pivot: {x: 0.47058824, y: -1.909091}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 8
+      width: 17
       height: 11
     spriteID: c24c17172e513c042ae257ec6b3d7695
     spriteBone: []
@@ -194,27 +194,27 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 29
-        width: 6
-        height: 3
+        x: 9
+        y: 21
+        width: 16
+        height: 11
       spriteId: 4bf9c6820b6628b49af868d36f3b75af
     - name: ItemThrust_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 12
+        x: 8
         y: 24
-        width: 8
+        width: 16
         height: 8
       spriteId: 9a67cdc380903af4a9d080b984b7f309
     - name: ItemThrust_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 12
+        x: 8
         y: 21
-        width: 8
+        width: 17
         height: 11
       spriteId: c24c17172e513c042ae257ec6b3d7695
     linkedCells: []
