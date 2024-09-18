@@ -1,0 +1,835 @@
+fileFormatVersion: 2
+guid: 975984139ebd80141b9478da1dab1fd9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ScreenEater_Frame_0
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: 6e478073c064d5a4391fc7b4aaf2be4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ScreenEater_Frame_1
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: 9f45ec64a1cb62e4694a7d97e92b828b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1092}
+  - name: ScreenEater_Frame_2
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: e04c2eb404013d846b98131cdacef53f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2180}
+  - name: ScreenEater_Frame_3
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: 5869f6e28edc4bb4aa64da367763f5b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 4}
+  - name: ScreenEater_Frame_4
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: 7973ab8f378ac8e408666e77aab212e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 1092}
+  - name: ScreenEater_Frame_5
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 167f5cc267520384597a28acfc720899
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 2180}
+  - name: ScreenEater_Frame_6
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: 18335d43735e7d7499bc66057aa86bdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 546, y: 4}
+  - name: ScreenEater_Frame_7
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: 4074bf69f4a1f2a4fadc9fd07d8d3cef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 546, y: 1092}
+  - name: ScreenEater_Frame_8
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 0c61bdbe499ad6546b72a0ada985b633
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 546, y: 2180}
+  - name: ScreenEater_Frame_9
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: fdf02b1b1878ee04bb9acfd66639eee9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 817, y: 4}
+  - name: ScreenEater_Frame_10
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: d49ec36a0f7b44c4e9d57e5a5b022cab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 817, y: 1092}
+  - name: ScreenEater_Frame_11
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 0c1027038c51da044b7363ccc695ac4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 817, y: 2180}
+  - name: ScreenEater_Frame_12
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1088
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: 7e039289b1aae6248a34c8a79bde48b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1088, y: 4}
+  - name: ScreenEater_Frame_13
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1088
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: 9b0a2d095896d264293e2e0ed5c96750
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1088, y: 1092}
+  - name: ScreenEater_Frame_14
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1088
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 4eb6aaddb2aab6042bd00573d5be31a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1088, y: 2180}
+  - name: ScreenEater_Frame_15
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1359
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: 89e854b140daa7e4ab8f87c243ab7eed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1359, y: 4}
+  - name: ScreenEater_Frame_16
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1359
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: 16b6ce9287184464d8b893c2d77a78dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1359, y: 1092}
+  - name: ScreenEater_Frame_17
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1359
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 1da1f328246ddc4478a13378339329c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1359, y: 2180}
+  - name: ScreenEater_Frame_18
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1630
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: a8153adcdace0b44bacccda441b59529
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1630, y: 4}
+  - name: ScreenEater_Frame_19
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1630
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: c89c27b5811c44a4da00184cff90c30b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1630, y: 1092}
+  - name: ScreenEater_Frame_20
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1630
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 65693baa840dc594483a2b7b2098f586
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1630, y: 2180}
+  - name: ScreenEater_Frame_21
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1901
+      y: 4
+      width: 263
+      height: 1080
+    spriteID: f8767ce4f69dafc4bab52323ea164f7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1901, y: 4}
+  - name: ScreenEater_Frame_22
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1901
+      y: 1092
+      width: 263
+      height: 1080
+    spriteID: c43f0a0df1fd4d044888ec55d12abe56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1901, y: 1092}
+  - name: ScreenEater_Frame_23
+    originalName: 
+    pivot: {x: 0.48288977, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1901
+      y: 2180
+      width: 263
+      height: 1080
+    spriteID: 74fcdde9422b4f547ab7fd66d42c73b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1901, y: 2180}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 745210755
+    name: ScreenEater
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ScreenEater_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 6e478073c064d5a4391fc7b4aaf2be4b
+    - name: ScreenEater_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 9f45ec64a1cb62e4694a7d97e92b828b
+    - name: ScreenEater_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: e04c2eb404013d846b98131cdacef53f
+    - name: ScreenEater_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 5869f6e28edc4bb4aa64da367763f5b8
+    - name: ScreenEater_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 7973ab8f378ac8e408666e77aab212e9
+    - name: ScreenEater_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 167f5cc267520384597a28acfc720899
+    - name: ScreenEater_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 18335d43735e7d7499bc66057aa86bdf
+    - name: ScreenEater_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 4074bf69f4a1f2a4fadc9fd07d8d3cef
+    - name: ScreenEater_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 0c61bdbe499ad6546b72a0ada985b633
+    - name: ScreenEater_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: fdf02b1b1878ee04bb9acfd66639eee9
+    - name: ScreenEater_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: d49ec36a0f7b44c4e9d57e5a5b022cab
+    - name: ScreenEater_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 0c1027038c51da044b7363ccc695ac4b
+    - name: ScreenEater_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 7e039289b1aae6248a34c8a79bde48b7
+    - name: ScreenEater_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 9b0a2d095896d264293e2e0ed5c96750
+    - name: ScreenEater_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 4eb6aaddb2aab6042bd00573d5be31a0
+    - name: ScreenEater_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 89e854b140daa7e4ab8f87c243ab7eed
+    - name: ScreenEater_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 16b6ce9287184464d8b893c2d77a78dc
+    - name: ScreenEater_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 1da1f328246ddc4478a13378339329c4
+    - name: ScreenEater_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: a8153adcdace0b44bacccda441b59529
+    - name: ScreenEater_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: c89c27b5811c44a4da00184cff90c30b
+    - name: ScreenEater_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 65693baa840dc594483a2b7b2098f586
+    - name: ScreenEater_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: f8767ce4f69dafc4bab52323ea164f7f
+    - name: ScreenEater_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: c43f0a0df1fd4d044888ec55d12abe56
+    - name: ScreenEater_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 833
+        y: 0
+        width: 263
+        height: 1080
+      spriteId: 74fcdde9422b4f547ab7fd66d42c73b7
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 1920, y: 1080}
