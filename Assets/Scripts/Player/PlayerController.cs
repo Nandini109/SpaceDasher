@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player")]
     [SerializeField] private float FlySpeed = 1f;
     [SerializeField] private float FallSpeed = 1f;
-    [SerializeField] private float RunSpeed = 4f;
+    [SerializeField] private float runSpeed = 4f;
     [SerializeField] private GameObject Thrust;
 
     [Header("Multiplier")]
