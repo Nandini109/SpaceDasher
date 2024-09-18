@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject Thrust;
 
     [Header("Multiplier")]
-    [SerializeField] private float MultiplierForce = 5f;
-    [SerializeField] private float MultiplierTime = 0.5f;
+    [SerializeField] private float multiplierForce = 5f;
+    [SerializeField] private float multiplierTime = 0.5f;
 
     [Header("Reducer")]
-    [SerializeField] private float ReducedSpeed = 1f;
-    [SerializeField] private float ReducedTime = 0.5f;
+    [SerializeField] private float reducedSpeed = 1f;
+    [SerializeField] private float reducedTime = 0.5f;
     private float RestoreSpeed;
 
     private bool isPlayerDashing;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         playerControls.Player.Dash.performed += ctx => OnButtonPressed();
         playerControls.Player.Dash.canceled += ctx => OnButtonReleased();
 
-        RestoreSpeed = RunSpeed;
+        RestoreSpeed = runSpeed;
     }
 
     private void Start()
@@ -79,8 +79,12 @@ public class PlayerController : MonoBehaviour
         //rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
         rb.gravityScale = -FlySpeed;
         Thrust.gameObject.SetActive(true);
+        /*
+        currentFlySpeed += flySpeedRate;
         
-       // Debug.Log("Player is Flying");
+        currentFlySpeed = Mathf.Clamp(currentFlySpeed, 0f, maxFlySpeed);
+        Debug.Log(currentFlySpeed);
+        */
     }
 
     private void OnButtonReleased()
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     private void RunCountinous()
     {
-        rb.velocity = new Vector2(RunSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(runSpeed, rb.velocity.y);
     }
 
 
@@ -130,13 +134,13 @@ public class PlayerController : MonoBehaviour
         OnMultiplier = true;
         Vector3 startPosition = transform.position;
 
-        Vector3 targetPosition = startPosition + new Vector3(MultiplierForce, 0, 0);
+        Vector3 targetPosition = startPosition + new Vector3(multiplierForce, 0, 0);
 
         float elapsedTime = 0f;
 
-        while (elapsedTime < MultiplierTime)
+        while (elapsedTime < multiplierTime)
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / MultiplierTime);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / multiplierTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -150,12 +154,12 @@ public class PlayerController : MonoBehaviour
     {
         OnReducer = true;
 
-        RunSpeed = ReducedSpeed;
+        runSpeed = reducedSpeed;
         Debug.Log("Speed is Reduced");
 
-        yield return new WaitForSeconds(ReducedTime);
+        yield return new WaitForSeconds(reducedTime);
 
-        RunSpeed = RestoreSpeed;
+        runSpeed = RestoreSpeed;
         Debug.Log("Speed is Restored");
 
         OnReducer = false;
