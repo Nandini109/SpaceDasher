@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 1c2e7a708930d824281ca7fee44d176b
+=======
 guid: 945643c418f307f43bcd75b53a87b9d0
+>>>>>>> origin/XinghuaN
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
