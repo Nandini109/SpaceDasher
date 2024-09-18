@@ -1693,6 +1693,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1124373899273923559, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
+      propertyPath: FlySpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124373899273923559, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
+      propertyPath: FallSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132316342181295672, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132316342181295672, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8856170414793623357, guid: 2c0a08d9e5454e34ca84a4243a69b6ff, type: 3}
       propertyPath: OnRingsCollected.m_PersistentCalls.m_Calls.Array.size
       value: 1
