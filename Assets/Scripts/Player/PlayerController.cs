@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Player")]
-    [SerializeField] private float FlySpeed = 5f;
-    [SerializeField] private float FallSpeed = 2f;
+    [SerializeField] private float FlySpeed = 1f;
+    [SerializeField] private float FallSpeed = 1f;
     [SerializeField] private float RunSpeed = 4f;
     [SerializeField] private GameObject Thrust;
 
@@ -76,7 +76,8 @@ public class PlayerController : MonoBehaviour
     private void OnButtonPressed()
     {
         isPlayerDashing = true;
-        rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
+        //rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
+        rb.gravityScale = -FlySpeed;
         Thrust.gameObject.SetActive(true);
         
        // Debug.Log("Player is Flying");
@@ -85,7 +86,8 @@ public class PlayerController : MonoBehaviour
     private void OnButtonReleased()
     {
         isPlayerDashing = false;
-        rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+        //rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+        rb.gravityScale = FallSpeed;
         Thrust.gameObject.SetActive(false);
         
     }
