@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8276c38e2b08bcf4fb275a7b4c24b5a7
+=======
+guid: 705ec23d87fbcb745b38f464b6f83fe0
+>>>>>>> origin/XinghuaN
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -132,7 +136,11 @@ ScriptedImporter:
       y: 4
       width: 18
       height: 32
+<<<<<<< HEAD
     spriteID: 24fb0c17c75ace24696c3fb11314e79b
+=======
+    spriteID: 3af4b00475f6b1345bf0e37d1c761e3e
+>>>>>>> origin/XinghuaN
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,7 +166,11 @@ ScriptedImporter:
         y: 0
         width: 18
         height: 32
+<<<<<<< HEAD
       spriteId: 24fb0c17c75ace24696c3fb11314e79b
+=======
+      spriteId: 3af4b00475f6b1345bf0e37d1c761e3e
+>>>>>>> origin/XinghuaN
     linkedCells: []
     parentIndex: -1
   platformSettings: []
