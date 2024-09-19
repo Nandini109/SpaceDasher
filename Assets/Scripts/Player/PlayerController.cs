@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float FallSpeed = 2f;
     [SerializeField] private float RunSpeed = 4f;
     [SerializeField] private GameObject Thrust;
+    public bool isPlayerDie;
 
     [Header("Multiplier")]
     [SerializeField] private float MultiplierForce = 5f;
@@ -31,8 +32,6 @@ public class PlayerController : MonoBehaviour
     private bool OnReducer;
 
     private CameraMove cameraMove;
-    //public bool isPlayerDied;
-    //public bool isPlayerWin;
 
     private void Awake()
     {
@@ -164,9 +163,9 @@ public class PlayerController : MonoBehaviour
     {
         //CameraMove cameraMove = GetComponent<CameraMove>();
         cameraMove.StopCamera();
-        Destroy(gameObject);
-        //isPlayerDied = true;
         MenuManager.Instance.ShowDieMenu();
-        Debug.Log("Player is Dead");
+        Destroy(gameObject);
+        isPlayerDie = true;
+        Time.timeScale = 0f;
     }
 }

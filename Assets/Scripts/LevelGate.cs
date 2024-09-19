@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class LevelGate : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-       // Debug.Log("1" + other.GetComponent<PlayerController>());
         if (other.GetComponent<PlayerController>())
         {
-            Debug.Log("controller has");
-            MenuManager.Instance.ShowWinMenu();
+            Time.timeScale = 0f;
+             MenuManager.Instance.ShowWinMenu();
+           // SceneLoader.Instance.LoadScene(name);
         }
        
     }

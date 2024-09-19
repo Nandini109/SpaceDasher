@@ -6,21 +6,43 @@ using UnityEngine.InputSystem;
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance { get; private set; }
-    [SerializeField] private PlayerControls playerControls;
+    private InputAction Pause;//when player esc key  input ,pause menu will show
+    private PlayerControls playerControls;
+
     private SceneLoader sceneLoader;
-    private InputAction Pause;
+  
+    [SerializeField] private GameObject pauseMenuPerfab;
+    [SerializeField] private GameObject dieMenuPerfab;
+    [SerializeField] private GameObject winMenuPerfab;
+
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject dieMenu;
     [SerializeField] private GameObject winMenu;
-
 
     private void Start()
     {
         pauseMenu.SetActive(false);
         winMenu.SetActive(false);
         dieMenu.SetActive(false);
+    }
 
-      
+    public void InitializedMenu()
+    {
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPerfab);
+        }
+        if (dieMenu == null)
+        {
+            dieMenu = Instantiate(dieMenuPerfab);
+        }
+        if(winMenu == null)
+        {
+            winMenu = Instantiate(winMenuPerfab);
+        }
+       
+        
+       
     }
 
     private void Awake()
@@ -33,15 +55,12 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-           // Destroy(gameObject); 
+          //  Destroy(gameObject); 
         }
 
         playerControls = new PlayerControls();
-       
-       
         if (pauseMenu.activeSelf)
         {
-           
             playerControls.MenuControl.Pause.performed += ctx => PauseGame();
         }
         else
@@ -53,9 +72,7 @@ public class MenuManager : MonoBehaviour
 
     private void PauseGame()
     {
-        Debug.Log("pause menu show");
         Time.timeScale = 0f;
-        Debug.Log("pause game" );
         pauseMenu.SetActive(true);
     }
     public void UnPauseGame()
@@ -72,24 +89,39 @@ public class MenuManager : MonoBehaviour
     {
         playerControls.Disable();
     }
+
     private void BackToGame()
     {
         Time.timeScale = 1.0f;
         pauseMenu?.SetActive(false);
-        Debug.Log("pause close");
+        
     }
+
     public void ShowDieMenu()
     {
-        dieMenu?.SetActive(true);
+        
+        if (dieMenu == null)
+        {
+            dieMenu = Instantiate(dieMenuPerfab);
+           
+        }
+        dieMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
+
     public void ShowWinMenu()
     {
+
+        if (winMenu == null)
+        {
+            winMenu = Instantiate(winMenuPerfab);
+
+        }
         winMenu?.SetActive(true);
     }
-    private void ResetGame()
-    {
-        sceneLoader.PlayGame();
-    }
+
+  
+
     private void ToMainMenu()
     {
         sceneLoader.PlayGame();
