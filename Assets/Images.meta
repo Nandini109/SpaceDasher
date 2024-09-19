@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 4531cb3ec6ba0a64d96b73965fbae5b6
+<<<<<<< HEAD
+guid: d7e13d703ce319b4fb3beaaf4b130fe7
+=======
+guid: 95ca780b13ac55c41801f5f22e078cd7
+>>>>>>> origin/XinghuaN
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
