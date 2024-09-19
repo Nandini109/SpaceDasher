@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     private bool OnReducer;
 
     private CameraMove cameraMove;
+    //public bool isPlayerDied;
+    //public bool isPlayerWin;
 
     private void Awake()
     {
@@ -102,7 +104,6 @@ public class PlayerController : MonoBehaviour
         {
             //transform.position += new Vector3(MultiplierForce, 0, 0);
             StartCoroutine(MultilierForward());
-            Debug.Log("Yayayayayayayaya");
         }
 
         if(other.GetComponent<Reducer>())
@@ -164,7 +165,8 @@ public class PlayerController : MonoBehaviour
         //CameraMove cameraMove = GetComponent<CameraMove>();
         cameraMove.StopCamera();
         Destroy(gameObject);
+        //isPlayerDied = true;
+        MenuManager.Instance.ShowDieMenu();
         Debug.Log("Player is Dead");
-
     }
 }

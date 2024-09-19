@@ -5,22 +5,40 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
-    private PlayerControls playerControls;
+    public static MenuManager Instance { get; private set; }
+    [SerializeField] private PlayerControls playerControls;
     private SceneLoader sceneLoader;
     private InputAction Pause;
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject dieMenu;
+    [SerializeField] private GameObject winMenu;
+
 
     private void Start()
     {
         pauseMenu.SetActive(false);
+        winMenu.SetActive(false);
+        dieMenu.SetActive(false);
+
+      
     }
 
     private void Awake()
     {
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+           // Destroy(gameObject); 
+        }
+
         playerControls = new PlayerControls();
-        sceneLoader = new SceneLoader();
-        Debug.Log("playerControls is" + playerControls);
-        Debug.Log("sceneLoader is" + sceneLoader);
+       
+       
         if (pauseMenu.activeSelf)
         {
            
@@ -59,6 +77,14 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1.0f;
         pauseMenu?.SetActive(false);
         Debug.Log("pause close");
+    }
+    public void ShowDieMenu()
+    {
+        dieMenu?.SetActive(true);
+    }
+    public void ShowWinMenu()
+    {
+        winMenu?.SetActive(true);
     }
     private void ResetGame()
     {
