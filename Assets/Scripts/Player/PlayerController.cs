@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     [Header("Player")]
     [SerializeField] private float fallSpeed = 5f;
     [SerializeField] private float maxFlySpeed = 10f;
-    //[SerializeField] private float flySpeedRate = 2f;
-    //[SerializeField] private float currentFlySpeed = 4f;
+    [SerializeField] private float flySpeedRate = 2f;
+    [SerializeField] private float currentFlySpeed = 4f;
     [SerializeField] private float runSpeed = 4f;
     [SerializeField] private GameObject Thrust;
 
@@ -77,14 +77,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnButtonPressed()
     {
-        
         isPlayerDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, maxFlySpeed);
         Debug.Log("Player is Flying");
         Thrust.gameObject.SetActive(true);
-        
         /*
-        currentFlySpeed += flySpeedRate * Time.deltaTime;
+        currentFlySpeed += flySpeedRate;
         
         currentFlySpeed = Mathf.Clamp(currentFlySpeed, 0f, maxFlySpeed);
         Debug.Log(currentFlySpeed);
