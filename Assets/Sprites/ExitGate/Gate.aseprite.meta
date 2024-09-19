@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8276c38e2b08bcf4fb275a7b4c24b5a7
+guid: 3d3ac7c25fb8a3a449489bfde4c1ffe5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 6
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638623449165970624
+  platformSettingsDirtyTick: 638623447428930777
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Ring
+  - name: Gate_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.45000002, y: -0.032258064}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 20
+      height: 31
+    spriteID: f6ebfe39786cb5f41b089e30a7d06a13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: Gate_Frame_1
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 18
-      height: 32
-    spriteID: 05483bcd1d4cbca44a0d91f689575633
+      width: 21
+      height: 30
+    spriteID: 817981981a4018247be7d42297dda3b5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,24 +161,62 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Gate_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 4
+      width: 22
+      height: 28
+    spriteID: fd18d58bf78f68c4cb236534143eb1a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 471148016
-    name: Ring
+    guid: 885267743
+    name: Gate
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Ring
+    - name: Gate_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 7
-        y: 0
-        width: 18
-        height: 32
-      spriteId: 05483bcd1d4cbca44a0d91f689575633
+        y: 1
+        width: 20
+        height: 31
+      spriteId: f6ebfe39786cb5f41b089e30a7d06a13
+    - name: Gate_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 6
+        y: 1
+        width: 21
+        height: 30
+      spriteId: 817981981a4018247be7d42297dda3b5
+    - name: Gate_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 22
+        height: 28
+      spriteId: fd18d58bf78f68c4cb236534143eb1a3
     linkedCells: []
     parentIndex: -1
   platformSettings:

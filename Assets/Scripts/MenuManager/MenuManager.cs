@@ -23,7 +23,7 @@ public class MenuManager : MonoBehaviour
         Debug.Log("sceneLoader is" + sceneLoader);
         if (pauseMenu.activeSelf)
         {
-            Debug.Log("pause menu show");
+           
             playerControls.MenuControl.Pause.performed += ctx => PauseGame();
         }
         else
@@ -35,6 +35,7 @@ public class MenuManager : MonoBehaviour
 
     private void PauseGame()
     {
+        Debug.Log("pause menu show");
         Time.timeScale = 0f;
         Debug.Log("pause game" );
         pauseMenu.SetActive(true);
