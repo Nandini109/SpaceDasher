@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4338362589280166775}
-  - component: {fileID: 105986099651574354}
   - component: {fileID: 2611729018240208351}
+  - component: {fileID: 6372804382525921291}
   m_Layer: 0
   m_Name: Rings
   m_TagString: Untagged
@@ -35,8 +35,20 @@ Transform:
   - {fileID: 3012909867811342362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &105986099651574354
-CircleCollider2D:
+--- !u!114 &2611729018240208351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152972659178350716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb29c16d552ab2d408feab77e8d2d401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &6372804382525921291
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -67,21 +79,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &2611729018240208351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152972659178350716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb29c16d552ab2d408feab77e8d2d401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0.013725397, y: 0.96983397}
+  m_Size: {x: 1.076453, y: 2.024319}
+  m_Direction: 0
 --- !u!1001 &4937498046219056919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,6 +93,14 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: a97fa8276c24e5846aa81f99d068812d, type: 3}
       propertyPath: m_Name
       value: RingOutside
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: a97fa8276c24e5846aa81f99d068812d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: a97fa8276c24e5846aa81f99d068812d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1106997499
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a97fa8276c24e5846aa81f99d068812d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -155,6 +163,18 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 4e32940cf8da62c408c9e81edfaff1a3, type: 3}
       propertyPath: m_Name
       value: RingInside
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 4e32940cf8da62c408c9e81edfaff1a3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 4e32940cf8da62c408c9e81edfaff1a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 4e32940cf8da62c408c9e81edfaff1a3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1106997499
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 4e32940cf8da62c408c9e81edfaff1a3, type: 3}
       propertyPath: m_LocalPosition.x
