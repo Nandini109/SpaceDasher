@@ -14,6 +14,7 @@ public class SceneLoader : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+     
     }
     public void PlayGame()
     {
@@ -24,6 +25,7 @@ public class SceneLoader : MonoBehaviour
     private void InitializeGame()
     {
         Time.timeScale = 1.0f;
+       
         MenuManager.Instance.InitializedMenu();
 
     }

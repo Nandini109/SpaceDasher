@@ -19,33 +19,32 @@ public class MenuManager : MonoBehaviour
     private GameObject dieMenu;
     private GameObject winMenu;
 
-    private void Start()
-    {
-        InitializedMenu();
-        pauseMenu.SetActive(false);
-        winMenu.SetActive(false);
-        dieMenu.SetActive(false);
-    }
+   
 
     public void InitializedMenu()
     {
         if (pauseMenu == null)
         {
             pauseMenu = Instantiate(pauseMenuPerfab);
+            pauseMenu.SetActive(false);
         }
         if (dieMenu == null)
         {
             dieMenu = Instantiate(dieMenuPerfab);
+            dieMenu.SetActive(false);
         }
         if(winMenu == null)
         {
             winMenu = Instantiate(winMenuPerfab);
+            winMenu.SetActive(false);
         }
     }
-
+  
     private void Awake()
     {
-
+        InitializedMenu();
+        
+        
         if (Instance == null)
         {
             Instance = this;
@@ -58,22 +57,29 @@ public class MenuManager : MonoBehaviour
 
         playerControls = new PlayerControls();
 
-        if (pauseMenu != null)
+        if (!pauseMenu.activeSelf)
         {
-            if (pauseMenu.activeSelf)
-            {
-                playerControls.MenuControl.Pause.performed += ctx => PauseGame();
-            }
-            else
-            {
-                BackToGame();
-            }
+         
+            playerControls.MenuControl.Pause.performed += ctx => PauseGame();
         }
+        else
+        {
+            BackToGame();
+        }
+        
+      
     }
 
     private void PauseGame()
     {
+     
         Time.timeScale = 0f;
+
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPerfab);
+
+        }
         pauseMenu.SetActive(true);
     }
     public void UnPauseGame()
