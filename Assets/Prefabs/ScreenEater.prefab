@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3853623790386331802}
   - component: {fileID: 7327885239431687322}
-  - component: {fileID: 6382416406952755070}
-  - component: {fileID: 6966218521150191709}
   - component: {fileID: 5500298862559103023}
+  - component: {fileID: 132292136252880009}
+  - component: {fileID: 7302185092919703838}
   m_Layer: 0
   m_Name: ScreenEater
   m_TagString: Untagged
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1106997499
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 3831001217499051203, guid: 975984139ebd80141b9478da1dab1fd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -87,7 +87,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &6382416406952755070
+--- !u!95 &5500298862559103023
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005179803716503784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 6086797262066432841, guid: 975984139ebd80141b9478da1dab1fd9, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &132292136252880009
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +144,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.48288977, y: 0}
-    oldSize: {x: 2.63, y: 10.8}
+    oldSize: {x: 5.26, y: 21.6}
     newSize: {x: 2.63, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -131,36 +152,36 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.365, y: 1.06}
-      - {x: 1.265, y: 1.0799999}
-      - {x: 1.305, y: 2.2}
-      - {x: 1.245, y: 4.46}
-      - {x: 1.345, y: 4.4}
-      - {x: 1.365, y: 4.48}
-      - {x: 1.365, y: 4.72}
-      - {x: 1.165, y: 4.8599997}
-      - {x: 0.965, y: 5.3599997}
-      - {x: 1.025, y: 5.5}
-      - {x: 1.3249999, y: 5.8399997}
-      - {x: 1.365, y: 5.8399997}
-      - {x: 1.365, y: 6.06}
-      - {x: 1.265, y: 6.08}
-      - {x: 1.305, y: 7.2}
-      - {x: 1.265, y: 9.44}
-      - {x: 1.365, y: 9.5}
-      - {x: 1.365, y: 9.679999}
-      - {x: 0.965, y: 10.2}
-      - {x: 1.025, y: 10.5}
-      - {x: 1.245, y: 10.78}
-      - {x: 1.245, y: 10.8}
-      - {x: -1.275, y: 10.8}
-      - {x: -1.275, y: 0}
-      - {x: 1.025, y: 0}
-      - {x: 1.025, y: 0.04}
-      - {x: 1.045, y: 0.58}
-      - {x: 1.365, y: 0.82}
+    - - {x: 2.73, y: 2.12}
+      - {x: 2.53, y: 2.1599998}
+      - {x: 2.61, y: 4.4}
+      - {x: 2.49, y: 8.92}
+      - {x: 2.69, y: 8.8}
+      - {x: 2.73, y: 8.96}
+      - {x: 2.73, y: 9.44}
+      - {x: 2.33, y: 9.719999}
+      - {x: 1.93, y: 10.719999}
+      - {x: 2.05, y: 11}
+      - {x: 2.6499999, y: 11.679999}
+      - {x: 2.73, y: 11.679999}
+      - {x: 2.73, y: 12.12}
+      - {x: 2.53, y: 12.16}
+      - {x: 2.61, y: 14.4}
+      - {x: 2.53, y: 18.88}
+      - {x: 2.73, y: 19}
+      - {x: 2.73, y: 19.359999}
+      - {x: 1.93, y: 20.4}
+      - {x: 2.05, y: 21}
+      - {x: 2.49, y: 21.56}
+      - {x: 2.49, y: 21.6}
+      - {x: -2.55, y: 21.6}
+      - {x: -2.55, y: 0}
+      - {x: 2.05, y: 0}
+      - {x: 2.05, y: 0.08}
+      - {x: 2.09, y: 1.16}
+      - {x: 2.73, y: 1.64}
   m_UseDelaunayMesh: 0
---- !u!114 &6966218521150191709
+--- !u!114 &7302185092919703838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,24 +193,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4b1cc0fcbaee8408507ae0990e2962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5500298862559103023
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6005179803716503784}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 6086797262066432841, guid: 975984139ebd80141b9478da1dab1fd9, type: 3}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

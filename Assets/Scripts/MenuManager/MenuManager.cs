@@ -5,38 +5,75 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager Instance { get; private set; }
+    private InputAction Pause;//when player esc key  input ,pause menu will show
     private PlayerControls playerControls;
+
     private SceneLoader sceneLoader;
-    private InputAction Pause;
-    [SerializeField] GameObject pauseMenu;
+  
+    [SerializeField] private GameObject pauseMenuPerfab;
+    [SerializeField] private GameObject dieMenuPerfab;
+    [SerializeField] private GameObject winMenuPerfab;
+
+    private GameObject pauseMenu;
+    private GameObject dieMenu;
+    private GameObject winMenu;
 
     private void Start()
     {
+        InitializedMenu();
         pauseMenu.SetActive(false);
+        winMenu.SetActive(false);
+        dieMenu.SetActive(false);
+    }
+
+    public void InitializedMenu()
+    {
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPerfab);
+        }
+        if (dieMenu == null)
+        {
+            dieMenu = Instantiate(dieMenuPerfab);
+        }
+        if(winMenu == null)
+        {
+            winMenu = Instantiate(winMenuPerfab);
+        }
     }
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
-        sceneLoader = new SceneLoader();
-        Debug.Log("playerControls is" + playerControls);
-        Debug.Log("sceneLoader is" + sceneLoader);
-        if (pauseMenu.activeSelf)
+
+        if (Instance == null)
         {
-            Debug.Log("pause menu show");
-            playerControls.MenuControl.Pause.performed += ctx => PauseGame();
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            BackToGame();
+          //  Destroy(gameObject); 
         }
 
+        playerControls = new PlayerControls();
+
+        if (pauseMenu != null)
+        {
+            if (pauseMenu.activeSelf)
+            {
+                playerControls.MenuControl.Pause.performed += ctx => PauseGame();
+            }
+            else
+            {
+                BackToGame();
+            }
+        }
     }
 
     private void PauseGame()
     {
         Time.timeScale = 0f;
-        Debug.Log("pause game" );
         pauseMenu.SetActive(true);
     }
     public void UnPauseGame()
@@ -53,16 +90,37 @@ public class MenuManager : MonoBehaviour
     {
         playerControls.Disable();
     }
+
     private void BackToGame()
     {
         Time.timeScale = 1.0f;
         pauseMenu?.SetActive(false);
-        Debug.Log("pause close");
+        
     }
-    private void ResetGame()
+
+    public void ShowDieMenu()
     {
-        sceneLoader.PlayGame();
+        
+        if (dieMenu == null)
+        {
+            dieMenu = Instantiate(dieMenuPerfab);
+           
+        }
+        dieMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
+
+    public void ShowWinMenu()
+    {
+
+        if (winMenu == null)
+        {
+            winMenu = Instantiate(winMenuPerfab);
+
+        }
+        winMenu?.SetActive(true);
+    }
+
     private void ToMainMenu()
     {
         sceneLoader.PlayGame();

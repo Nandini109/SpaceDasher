@@ -102,7 +102,6 @@ public class PlayerController : MonoBehaviour
         {
             //transform.position += new Vector3(MultiplierForce, 0, 0);
             StartCoroutine(MultilierForward());
-            Debug.Log("Yayayayayayayaya");
         }
 
         if(other.GetComponent<Reducer>())
@@ -163,8 +162,8 @@ public class PlayerController : MonoBehaviour
     {
         //CameraMove cameraMove = GetComponent<CameraMove>();
         cameraMove.StopCamera();
+        MenuManager.Instance.ShowDieMenu();
         Destroy(gameObject);
-        Debug.Log("Player is Dead");
-
+        Time.timeScale = 0f;
     }
 }
