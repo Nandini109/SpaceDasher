@@ -11,7 +11,6 @@ public class LevelGate : MonoBehaviour
         {
             Time.timeScale = 0f;
              MenuManager.Instance.ShowWinMenu();
-           // SceneLoader.Instance.LoadScene(name);
         }
        
     }

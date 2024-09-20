@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float FallSpeed = 2f;
     [SerializeField] private float RunSpeed = 4f;
     [SerializeField] private GameObject Thrust;
-    public bool isPlayerDie;
 
     [Header("Multiplier")]
     [SerializeField] private float MultiplierForce = 5f;
@@ -165,7 +164,6 @@ public class PlayerController : MonoBehaviour
         cameraMove.StopCamera();
         MenuManager.Instance.ShowDieMenu();
         Destroy(gameObject);
-        isPlayerDie = true;
         Time.timeScale = 0f;
     }
 }

@@ -15,12 +15,13 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject dieMenuPerfab;
     [SerializeField] private GameObject winMenuPerfab;
 
-    [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject dieMenu;
-    [SerializeField] private GameObject winMenu;
+    private GameObject pauseMenu;
+    private GameObject dieMenu;
+    private GameObject winMenu;
 
     private void Start()
     {
+        InitializedMenu();
         pauseMenu.SetActive(false);
         winMenu.SetActive(false);
         dieMenu.SetActive(false);
@@ -40,9 +41,6 @@ public class MenuManager : MonoBehaviour
         {
             winMenu = Instantiate(winMenuPerfab);
         }
-       
-        
-       
     }
 
     private void Awake()
@@ -59,15 +57,18 @@ public class MenuManager : MonoBehaviour
         }
 
         playerControls = new PlayerControls();
-        if (pauseMenu.activeSelf)
-        {
-            playerControls.MenuControl.Pause.performed += ctx => PauseGame();
-        }
-        else
-        {
-            BackToGame();
-        }
 
+        if (pauseMenu != null)
+        {
+            if (pauseMenu.activeSelf)
+            {
+                playerControls.MenuControl.Pause.performed += ctx => PauseGame();
+            }
+            else
+            {
+                BackToGame();
+            }
+        }
     }
 
     private void PauseGame()
@@ -119,8 +120,6 @@ public class MenuManager : MonoBehaviour
         }
         winMenu?.SetActive(true);
     }
-
-  
 
     private void ToMainMenu()
     {
