@@ -42,7 +42,7 @@ public class MenuManager : MonoBehaviour
             winMenu = Instantiate(winMenuPerfab);
         }
     }
-
+  
     private void Awake()
     {
 
@@ -60,8 +60,10 @@ public class MenuManager : MonoBehaviour
 
         if (pauseMenu != null)
         {
+            
             if (pauseMenu.activeSelf)
             {
+                Debug.Log("have pause menu");
                 playerControls.MenuControl.Pause.performed += ctx => PauseGame();
             }
             else
@@ -73,7 +75,14 @@ public class MenuManager : MonoBehaviour
 
     private void PauseGame()
     {
+        Debug.Log("show the pause menu");
         Time.timeScale = 0f;
+
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPerfab);
+
+        }
         pauseMenu.SetActive(true);
     }
     public void UnPauseGame()
