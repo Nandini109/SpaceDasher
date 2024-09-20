@@ -31,11 +31,14 @@ public class PlayerController : MonoBehaviour
     private bool OnReducer;
 
     private CameraMove cameraMove;
+    private AudioManager audioManager;
 
     private void Awake()
     {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
+
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
 
         playerControls.Player.Dash.performed += ctx => OnButtonPressed();
         playerControls.Player.Dash.canceled += ctx => OnButtonReleased();
@@ -75,24 +78,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnButtonPressed()
     {
+        //player velocity is changed to fly speed when we press space
         isPlayerDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
+
+        //thrust animation plays
         Thrust.gameObject.SetActive(true);
-        
-       // Debug.Log("Player is Flying");
+       
     }
 
     private void OnButtonReleased()
     {
+        //makes player fall down at fall speed
         isPlayerDashing = false;
         rb.velocity += new Vector2(0, -FallSpeed * Time.deltaTime);
+
+        //thrust animation is turned off
         Thrust.gameObject.SetActive(false);
         
     }
 
     private void RunCountinous()
     {
+        //makes player move at constant speed
         rb.velocity = new Vector2(RunSpeed, rb.velocity.y);
+        
     }
 
 
@@ -100,14 +110,20 @@ public class PlayerController : MonoBehaviour
     {
         if (other.GetComponent<Multiplier>())
         {
-            //transform.position += new Vector3(MultiplierForce, 0, 0);
+            //Execute multiplier coroutine
             StartCoroutine(MultilierForward());
+
+            //audio
+            audioManager.PlaySFX(audioManager.speedBoost, 5);
         }
 
         if(other.GetComponent<Reducer>())
         {
-            //transform.position += new Vector3(-MultiplierForce, 0, 0);
+            //Execute reducer coroutine
             StartCoroutine(SpeedReducer());
+
+            //audio
+            audioManager.PlaySFX(audioManager.speedSlow, 5);
         }
 
 
@@ -117,12 +133,15 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Spikes>())
         {
+            //if player collides with any gameobject with spike script they die
             PlayerDeath();
-            
+            audioManager.PlaySFX(audioManager.die, 5);
+
         }
     }
     private IEnumerator MultilierForward()
     {
+        //this makes the multiplier boost smooth 
 
         OnMultiplier = true;
         Vector3 startPosition = transform.position;
@@ -145,25 +164,30 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator SpeedReducer()
     {
+        // on speed reducer it slow down the player for some time
         OnReducer = true;
 
         RunSpeed = ReducedSpeed;
-        Debug.Log("Speed is Reduced");
 
         yield return new WaitForSeconds(ReducedTime);
 
         RunSpeed = RestoreSpeed;
-        Debug.Log("Speed is Restored");
-
+     
         OnReducer = false;
     }
 
     private void PlayerDeath()
     {
-        //CameraMove cameraMove = GetComponent<CameraMove>();
+        //as soon as the player dies stop camera script will be excecuted 
         cameraMove.StopCamera();
+
+        //Die UI
         MenuManager.Instance.ShowDieMenu();
-        Destroy(gameObject);
+
+        //Player object is turned off
+        gameObject.SetActive(false);
         Time.timeScale = 0f;
+        
+
     }
 }

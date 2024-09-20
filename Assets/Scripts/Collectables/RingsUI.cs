@@ -14,6 +14,7 @@ public class RingsUI : MonoBehaviour
 
     public void UpdateRingCount(RingsCount ringsCount)
     {
+        //rings collect UI
         ringsCountText.text = ringsCount.NumberOfRings.ToString();
     }
     

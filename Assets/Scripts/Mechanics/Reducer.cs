@@ -8,6 +8,7 @@ public class Reducer : MonoBehaviour
     {
         if (other.GetComponent<PlayerController>())
         {
+            //disappearing once used by player
             Destroy(gameObject);
         }
     }
