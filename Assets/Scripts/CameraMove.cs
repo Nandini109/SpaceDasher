@@ -10,10 +10,10 @@ public class CameraMove : MonoBehaviour
 
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private Transform player;
-    [SerializeField] private float maxZoomOut = 15f; 
-    [SerializeField] private float standardZoom;
+    [SerializeField] private float maxZoomOut = 20f; 
+    private float standardZoom;
     [SerializeField] private float zoomSpeed = 5f; 
-    [SerializeField] private float rightScreenBoundary = 5f; 
+    [SerializeField] private float rightScreenBoundary = 8f; 
 
 
     private bool stopCamera = false;
