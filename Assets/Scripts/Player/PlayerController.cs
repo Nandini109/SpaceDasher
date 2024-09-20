@@ -31,11 +31,13 @@ public class PlayerController : MonoBehaviour
     private bool OnReducer;
 
     private CameraMove cameraMove;
+    private AudioManager audioManager;
 
     private void Awake()
     {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
 
         playerControls.Player.Dash.performed += ctx => OnButtonPressed();
         playerControls.Player.Dash.canceled += ctx => OnButtonReleased();
@@ -78,7 +80,7 @@ public class PlayerController : MonoBehaviour
         isPlayerDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, FlySpeed);
         Thrust.gameObject.SetActive(true);
-        
+        audioManager.PlaySFX(audioManager.fireEngine);
        // Debug.Log("Player is Flying");
     }
 
@@ -93,6 +95,7 @@ public class PlayerController : MonoBehaviour
     private void RunCountinous()
     {
         rb.velocity = new Vector2(RunSpeed, rb.velocity.y);
+        //audioManager.PlaySFX(audioManager.engine);
     }
 
 
@@ -102,12 +105,14 @@ public class PlayerController : MonoBehaviour
         {
             //transform.position += new Vector3(MultiplierForce, 0, 0);
             StartCoroutine(MultilierForward());
+            audioManager.PlaySFX(audioManager.speedBoost);
         }
 
         if(other.GetComponent<Reducer>())
         {
             //transform.position += new Vector3(-MultiplierForce, 0, 0);
             StartCoroutine(SpeedReducer());
+            audioManager.PlaySFX(audioManager.speedSlow);
         }
 
 
@@ -118,7 +123,8 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.GetComponent<Spikes>())
         {
             PlayerDeath();
-            
+            audioManager.PlaySFX(audioManager.die);
+
         }
     }
     private IEnumerator MultilierForward()
@@ -165,5 +171,7 @@ public class PlayerController : MonoBehaviour
         MenuManager.Instance.ShowDieMenu();
         Destroy(gameObject);
         Time.timeScale = 0f;
+        
+
     }
 }

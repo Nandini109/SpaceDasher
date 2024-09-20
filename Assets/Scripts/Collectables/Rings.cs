@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Rings : MonoBehaviour
 {
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         RingsCount ringsCount = other.GetComponent<RingsCount>();
@@ -11,6 +17,7 @@ public class Rings : MonoBehaviour
         if(ringsCount != null )
         {
             ringsCount.RingsCollected();
+            audioManager.PlaySFX(audioManager.coin);
             gameObject.SetActive(false);
         }
     }
