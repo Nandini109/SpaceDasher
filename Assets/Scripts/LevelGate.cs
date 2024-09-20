@@ -15,9 +15,12 @@ public class LevelGate : MonoBehaviour
     {
         if (other.GetComponent<PlayerController>())
         {
+            //win menu activate
             Time.timeScale = 0f;
             MenuManager.Instance.ShowWinMenu();
-            audioManager.PlaySFX(audioManager.win);
+
+            //win sound
+            audioManager.PlaySFX(audioManager.win, 1);
         }
 
     }

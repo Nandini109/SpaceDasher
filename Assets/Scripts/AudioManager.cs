@@ -8,8 +8,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource gameAudio;
     [SerializeField] AudioSource backgroundMusic;
 
-    public AudioClip engine;
-    public AudioClip fireEngine;
     public AudioClip speedBoost;
     public AudioClip speedSlow;
     public AudioClip win;
@@ -19,12 +17,14 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        //background music
         backgroundMusic.clip = background;
         backgroundMusic.Play();
     }
 
-    public void PlaySFX(AudioClip clip)
+    public void PlaySFX(AudioClip clip, int vol)
     {
         gameAudio.PlayOneShot(clip);
+        gameAudio.volume = vol;
     }
 }

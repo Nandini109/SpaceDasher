@@ -16,9 +16,13 @@ public class Rings : MonoBehaviour
 
         if(ringsCount != null )
         {
+            //collecting rings and making them disappear
             ringsCount.RingsCollected();
-            audioManager.PlaySFX(audioManager.coin);
             gameObject.SetActive(false);
+
+            //ring music
+            audioManager.PlaySFX(audioManager.coin, 5);
+            
         }
     }
 }
