@@ -50,37 +50,31 @@ public class MenuManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject); 
         }
-        else
-        {
-          //  Destroy(gameObject); 
-        }
 
         playerControls = new PlayerControls();
+        pauseMenu = pauseMenuPerfab.gameObject;
 
-        if (!pauseMenu.activeSelf)
+        pauseMenu.SetActive(false);
+    }
+
+    private void Update()
+    {
+        playerControls.MenuControl.Pause.performed += ctx => PauseGame();
+
+    }
+
+    private void PauseGame()
+    {
+        if (pauseMenu.activeSelf == false)
         {
-         
-            playerControls.MenuControl.Pause.performed += ctx => PauseGame();
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
         }
         else
         {
             BackToGame();
         }
         
-      
-    }
-
-    private void PauseGame()
-    {
-     
-        Time.timeScale = 0f;
-
-        if (pauseMenu == null)
-        {
-            pauseMenu = Instantiate(pauseMenuPerfab);
-
-        }
-        pauseMenu.SetActive(true);
     }
     public void UnPauseGame()
     {
@@ -100,7 +94,7 @@ public class MenuManager : MonoBehaviour
     private void BackToGame()
     {
         Time.timeScale = 1.0f;
-        pauseMenu?.SetActive(false);
+        pauseMenu.SetActive(false);
         
     }
 
